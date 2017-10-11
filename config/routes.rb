@@ -4,15 +4,15 @@ Rails.application.routes.draw do
     # resources :dojos
     # root 'dojos#index'
   get 'dojos' =>'dojos#index'
+  get 'dojos/new' => 'dojos#new'
+  get 'dojos/:id' => 'dojos#show'
+  get 'dojos/:id/edit' => 'dojos#edit'
+  #
+  post 'dojos/create' => 'dojos#create'
+  patch 'dojos/:id' => 'dojos#update'
+  delete 'dojos/:id' => 'dojos#destroy'
 
-  # get 'dojos/new' =>
-  #
-  # get 'dojos/create'
-  #
-  # get 'dojos/show'
-  #
-  # get 'dojos/edit'
-  #
+
   # get 'dojos/update'
   #
   # get 'dojos/destroy'
